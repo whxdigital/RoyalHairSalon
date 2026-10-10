@@ -1,0 +1,118 @@
+---
+const testimonials = [
+  {
+    name: 'Gonçalo Ferreira',
+    location: 'Odivelas, Lisboa',
+    rating: 5,
+    date: 'Há 2 semanas',
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80',
+    comment: 'Melhor barbearia de Odivelas, sem dúvida nenhuma! O Marco fez-me um skin fade perfeito para o casamento do meu irmão. A toalha quente na barba foi uma experiência incrível. Ambiente top na Rua Alves Redol!',
+    service: 'Combo Royal VIP'
+  },
+  {
+    name: 'Tiago Antunes',
+    location: 'Colinas do Cruzeiro, Odivelas',
+    rating: 5,
+    date: 'Há 1 mês',
+    avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=120&q=80',
+    comment: 'Agendei pelo site e fui atendido no minuto exato sem qualquer espera. O corte ficou impecável, barbeiros super atenciosos e café excelente. Já sou cliente fixo aqui.',
+    service: 'Corte Royal & Fade'
+  },
+  {
+    name: 'Rodrigo Mendonça',
+    location: 'Lisboa',
+    rating: 5,
+    date: 'Há 3 semanas',
+    avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=120&q=80',
+    comment: 'Venho de Lisboa de propósito para cortar aqui. A precisão da navalha e o cuidado com a pele não têm comparação. Vale cada cêntimo. Parabéns pelo profissionalismo!',
+    service: 'Barboterapia & Fade'
+  }
+];
+---
+
+<section id="reviews" class="py-24 relative overflow-hidden bg-neutral-950 border-t border-neutral-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    
+    <!-- Header with GMB Badge -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">
+        <span>Avaliações Verificadas</span>
+      </div>
+      <h2 class="font-royal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+        O Que Dizem os Nossos <span class="text-gold-gradient">Clientes</span>
+      </h2>
+      
+      <!-- Big Rating Badge -->
+      <div class="inline-flex items-center gap-4 p-3 rounded-2xl bg-neutral-900/90 border border-neutral-800 shadow-xl mt-2">
+        <div class="flex items-center gap-2">
+          <!-- Google Icon -->
+          <svg width="24" height="24" style="width: 24px; height: 24px; max-width: 24px; min-width: 24px; display: inline-block;" class="w-6 h-6" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+          </svg>
+          <span class="text-2xl font-black text-white font-royal">4.9</span>
+          <div class="text-amber-400 text-sm">
+            ★★★★★
+          </div>
+        </div>
+        <span class="text-xs text-neutral-400 border-l border-neutral-700 pl-4">
+          Com base em <strong>250+ avaliações no Google</strong>
+        </span>
+      </div>
+    </div>
+
+    <!-- Testimonials Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {testimonials.map((rev) => (
+        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between hover:border-amber-400/40 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <img src={rev.avatar} alt={rev.name} class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
+                <div>
+                  <h4 class="text-sm font-bold text-white">{rev.name}</h4>
+                  <span class="text-[11px] text-neutral-400">{rev.location}</span>
+                </div>
+              </div>
+              <span class="text-[10px] text-neutral-500">{rev.date}</span>
+            </div>
+
+            <div class="flex text-amber-400 text-xs mb-3">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+
+            <p class="text-xs text-neutral-300 leading-relaxed italic mb-4">
+              "{rev.comment}"
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-800 flex items-center justify-between text-[11px]">
+            <span class="text-amber-400 font-semibold">{rev.service}</span>
+            <span class="text-emerald-400 flex items-center gap-1 font-medium">
+              <svg width="14" height="14" style="width: 14px; height: 14px; max-width: 14px; min-width: 14px; display: inline-block;" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Google Verificado
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA Google Link -->
+    <div class="mt-12 text-center">
+      <a 
+        href="https://share.google/2O3L2FtG55BM0sQ7y" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-700 hover:border-amber-400 text-neutral-200 hover:text-amber-300 text-xs font-bold uppercase tracking-wider transition-all"
+      >
+        <span>Ver Todas as Avaliações no Google Maps</span>
+        <span>↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>

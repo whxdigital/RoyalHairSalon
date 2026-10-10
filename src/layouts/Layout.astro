@@ -1,0 +1,659 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Royal Hair Salon | A Melhor Barbearia & Salão em Odivelas (Lisboa)",
+  description = "Barbearia de excelência na Rua Alves Redol 10A, Odivelas. Cortes Fade milimétricos, corte tradicional à tesoura, barboterapia com toalha quente, coloração capilar e atendimento premium. Contacte +351 939 558 041 ou +351 920 206 618."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-PT" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#07080b" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="format-detection" content="telephone=yes, date=yes, address=yes, email=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Royal Hair" />
+    
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./favicon.svg" />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="barbearia odivelas, salão de cabeleireiro odivelas, corte de cabelo masculino odivelas, fade odivelas, skin fade odivelas, taper fade lisboa, corte tesoura odivelas, barboterapia toalha quente odivelas, barba odivelas, coloração capilar masculina odivelas, camuflagem cabelos brancos odivelas, lavar cabelo barbearia odivelas, melhor barbeiro odivelas lisboa, rua alves redol 10a, colinas do cruzeiro barbearia, royal hair salon odivelas, barbershop lisbon, hair salon odivelas" />
+    <meta name="author" content="Royal Hair Salon Odivelas" />
+    <meta name="publisher" content="Royal Hair Salon" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Geo & Citation Entity Meta Tags (Local & Regional Search) -->
+    <meta name="geo.region" content="PT-11" />
+    <meta name="geo.placename" content="Odivelas" />
+    <meta name="geo.position" content="38.7925;-9.1824" />
+    <meta name="ICBM" content="38.7925, -9.1824" />
+    <meta name="DC.title" content="Royal Hair Salon - Barbearia Odivelas" />
+    
+    <link rel="canonical" href="https://royalhairandbeautysalon.com/" />
+    <link rel="alternate" hreflang="pt" href="https://royalhairandbeautysalon.com/" />
+    <link rel="alternate" hreflang="pt-PT" href="https://royalhairandbeautysalon.com/" />
+    <link rel="alternate" hreflang="en" href="https://royalhairandbeautysalon.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://royalhairandbeautysalon.com/" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://royalhairandbeautysalon.com/" />
+    <meta property="og:site_name" content="Royal Hair Salon - Barbearia Odivelas" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Royal Hair Salon - A Melhor Barbearia em Odivelas" />
+    <meta property="business:contact_data:street_address" content="Rua Alves Redol 10A" />
+    <meta property="business:contact_data:locality" content="Odivelas" />
+    <meta property="business:contact_data:region" content="Lisboa" />
+    <meta property="business:contact_data:postal_code" content="2675-284" />
+    <meta property="business:contact_data:country_name" content="Portugal" />
+    <meta property="business:contact_data:phone_number" content="+351939558041" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200" />
+
+    <!-- Google Fonts: Cinzel, Syne, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Tailwind CSS CDN Fallback with Luxury Theme -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+    <script is:inline>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                50: '#fbf9f1',
+                100: '#f5f0db',
+                200: '#ebe0b4',
+                300: '#dec784',
+                400: '#d0ad56',
+                500: '#d4af37',
+                600: '#b88d29',
+                700: '#936a23',
+                800: '#785422',
+                900: '#644621',
+              },
+              obsidian: {
+                950: '#07080b',
+                900: '#0d0f17',
+                800: '#141724',
+                700: '#1e2235',
+              }
+            },
+            fontFamily: {
+              royal: ['Cinzel', 'serif'],
+              display: ['Syne', 'sans-serif'],
+              body: ['"Plus Jakarta Sans"', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Schema.org JSON-LD (Comprehensive AEO & GEO Optimized for HairSalon & BarberShop) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": ["HairSalon", "BarberShop", "LocalBusiness"],
+            "@id": "https://royalhairandbeautysalon.com/#salon",
+            "name": "Royal Hair Salon (Barbearia Odivelas)",
+            "alternateName": ["Royal Hair Salon", "Barbearia Odivelas", "Royal Barber Odivelas", "Royal Hair & Beauty Salon"],
+            "url": "https://royalhairandbeautysalon.com/",
+            "logo": "https://royalhairandbeautysalon.com/favicon.svg",
+            "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200",
+            "description": "Barbearia e salão de excelência na Rua Alves Redol 10A em Odivelas. Especialistas em cortes de cabelo masculinos de precisão, skin fade milimétrico, barboterapia com toalha quente, coloração e lavagem com massagem capilar.",
+            "telephone": ["+351939558041", "+351920206618"],
+            "priceRange": "€€",
+            "currenciesAccepted": "EUR",
+            "paymentAccepted": "Cash, Credit Card, Debit Card, MB WAY, Multibanco",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rua Alves Redol 10A",
+              "addressLocality": "Odivelas",
+              "postalCode": "2675-284",
+              "addressRegion": "Lisboa",
+              "addressCountry": "PT"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 38.7925,
+              "longitude": -9.1824
+            },
+            "hasMap": "https://maps.google.com/?q=Rua+Alves+Redol+10A+2675-284+Odivelas",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+351939558041",
+                "contactType": "reservations",
+                "areaServed": "PT",
+                "availableLanguage": ["Portuguese", "English", "Spanish"]
+              },
+              {
+                "@type": "ContactPoint",
+                "telephone": "+351920206618",
+                "contactType": "customer service",
+                "areaServed": "PT",
+                "availableLanguage": ["Portuguese", "English"]
+              }
+            ],
+            "areaServed": [
+              { "@type": "City", "name": "Odivelas" },
+              { "@type": "AdministrativeArea", "name": "Colinas do Cruzeiro" },
+              { "@type": "AdministrativeArea", "name": "Ramada" },
+              { "@type": "AdministrativeArea", "name": "Caneças" },
+              { "@type": "AdministrativeArea", "name": "Póvoa de Santo Adrião" },
+              { "@type": "AdministrativeArea", "name": "Olival Basto" },
+              { "@type": "AdministrativeArea", "name": "Pontinha" },
+              { "@type": "AdministrativeArea", "name": "Famões" },
+              { "@type": "City", "name": "Lisboa" },
+              { "@type": "City", "name": "Loures" }
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:30",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "09:00",
+                "closes": "19:30"
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "250",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "sameAs": [
+              "https://share.google/2O3L2FtG55BM0sQ7y",
+              "https://www.instagram.com/"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Serviços de Corte de Cabelo e Barbearia",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Corte Royal & Fade Perfeito",
+                    "description": "Corte de precisão personalizado, skin fade milimétrico, lavagem com massagem e finalização matte."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Corte Clássico Tradicional à Tesoura",
+                    "description": "Trabalho detalhado de tesoura com alinhamento de contornos à navalha e tónico refrescante."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Corte Júnior (Infantil)",
+                    "description": "Atendimento paciente e especializado para crianças até 12 anos em ambiente descontraído."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Barboterapia com Toalha Quente",
+                    "description": "Ritual de barbear com lâmina japonesa, toalha aromática a vapor e massagem facial relaxante."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Alinhamento & Escultura de Barba",
+                    "description": "Desenho preciso das linhas de bochecha e pescoço com hidratação de óleos biológicos."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Coloração & Camuflagem de Cabelos Brancos",
+                    "description": "Tonalização suave e 100% natural de fios grisalhos para cabelo e barba sem efeito artificial."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Spa de Couro Cabeludo & Lavagem Relaxante",
+                    "description": "Lavagem profunda com champô purificante e esfoliação anti-stress de couro cabeludo."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://royalhairandbeautysalon.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Qual é a morada e os contactos oficiais do Royal Hair Salon em Odivelas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O Royal Hair Salon fica situado na Rua Alves Redol 10A, 2675-284 Odivelas, Portugal (Grande Lisboa). Os contactos telefónicos diretos são +351 939 558 041 e +351 920 206 618 com suporte a chamadas e WhatsApp."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais são os serviços de corte e barbearia disponíveis no salão?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dispomos de Cortes Fade de alta precisão (Skin Fade, Low Fade, Mid Fade, Taper Fade), Corte Clássico à Tesoura, Corte Júnior Infantil, Barboterapia com Toalha Quente e Navalha, Alinhamento de Barba, Camuflagem de Cabelos Brancos, Coloração e Spa Capilar com Massagem Craniana."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "É necessário marcar horário antes ou aceitam clientes sem agendamento?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Aceitamos clientes sem marcação caso haja disponibilidade no momento, mas recomendamos o agendamento prévio online ou via WhatsApp (+351 939 558 041) para atendimento garantido sem qualquer tempo de espera."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual o horário de funcionamento do Royal Hair Salon Odivelas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Estamos abertos de Segunda a Sexta-feira das 09:30 às 20:00, e aos Sábados das 09:00 às 19:30. Encerramos aos Domingos."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://royalhairandbeautysalon.com/#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://royalhairandbeautysalon.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Barbearia Odivelas",
+                "item": "https://royalhairandbeautysalon.com/#about"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Serviços de Corte",
+                "item": "https://royalhairandbeautysalon.com/#services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Contactos & Localização",
+                "item": "https://royalhairandbeautysalon.com/#location"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Complete Inline Safety CSS -->
+    <style is:global>
+      :root {
+        --gold-primary: #d4af37;
+        --gold-light: #f6e27a;
+        --gold-dark: #aa771c;
+        --gold-gradient: linear-gradient(135deg, #f6e27a 0%, #d4af37 50%, #aa771c 100%);
+        --gold-glow: rgba(212, 175, 55, 0.35);
+        --bg-deep: #07080b;
+        --bg-card: rgba(14, 16, 23, 0.82);
+        --border-subtle: rgba(212, 175, 55, 0.18);
+        --border-active: rgba(212, 175, 55, 0.6);
+      }
+
+      /* Global SVG Protection */
+      svg {
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #07080b; }
+      ::-webkit-scrollbar-thumb { background: #262938; border-radius: 4px; border: 1px solid rgba(212, 175, 55, 0.2); }
+      ::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+
+      .font-royal { font-family: 'Cinzel', serif; letter-spacing: 0.05em; }
+      .font-display { font-family: 'Syne', sans-serif; }
+      .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+      .text-gold-gradient {
+        background: linear-gradient(135deg, #ffffff 0%, #f6e27a 35%, #d4af37 70%, #aa771c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .glass-panel {
+        background: var(--bg-card);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--border-subtle);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .glass-panel:hover {
+        border-color: var(--border-active);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px var(--gold-glow);
+      }
+
+      .btn-royal-gold {
+        position: relative;
+        background: var(--gold-gradient);
+        color: #07080b;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        border: none;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+        transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .btn-royal-gold::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -60%;
+        width: 40%;
+        height: 200%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.6) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(25deg);
+        transition: all 0.6s ease;
+      }
+      .btn-royal-gold:hover::before { left: 120%; }
+      .btn-royal-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(212, 175, 55, 0.55);
+      }
+
+      .btn-outline-gold {
+        background: transparent;
+        color: #f6e27a;
+        border: 1px solid var(--gold-primary);
+        letter-spacing: 0.06em;
+        transition: all 0.3s ease;
+      }
+      .btn-outline-gold:hover {
+        background: rgba(212, 175, 55, 0.12);
+        border-color: #f6e27a;
+        color: #fff;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+      }
+
+      /* 3D Rotating Barber Pole */
+      .barber-pole-container {
+        width: 40px;
+        height: 130px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
+      }
+      .barber-pole-cap {
+        width: 44px;
+        height: 14px;
+        background: linear-gradient(180deg, #f6e27a 0%, #aa771c 100%);
+        border-radius: 6px 6px 2px 2px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8), inset 0 1px 1px #fff;
+        z-index: 2;
+      }
+      .barber-pole-cap.bottom {
+        border-radius: 2px 2px 6px 6px;
+        background: linear-gradient(0deg, #f6e27a 0%, #aa771c 100%);
+      }
+      .barber-pole-glass {
+        width: 30px;
+        height: 102px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: inset 2px 0 4px rgba(255, 255, 255, 0.4), inset -2px 0 4px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .barber-pole-stripes {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: repeating-linear-gradient(
+          -45deg,
+          #e63946,
+          #e63946 12px,
+          #ffffff 12px,
+          #ffffff 24px,
+          #1d3557 24px,
+          #1d3557 36px,
+          #ffffff 36px,
+          #ffffff 48px
+        );
+        animation: spinBarberPole 3.5s linear infinite;
+      }
+      @keyframes spinBarberPole {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(96px); }
+      }
+
+      /* Animated Scissors Apparatus */
+      .scissors-interactive-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 460px;
+        height: 460px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .scissors-orbit-ring {
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        border: 1px dashed rgba(212, 175, 55, 0.3);
+        animation: spinClockwise 30s linear infinite;
+      }
+      .scissors-orbit-ring-inner {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        animation: spinCounterClockwise 20s linear infinite;
+      }
+      @keyframes spinClockwise { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes spinCounterClockwise { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+
+      .scissor-blade-top {
+        transform-origin: 160px 180px;
+        animation: snipTop 1.4s ease-in-out infinite;
+      }
+      .scissor-blade-bottom {
+        transform-origin: 160px 180px;
+        animation: snipBottom 1.4s ease-in-out infinite;
+      }
+      @keyframes snipTop {
+        0%, 100% { transform: rotate(0deg); }
+        40% { transform: rotate(-16deg); }
+        60% { transform: rotate(4deg); }
+        75% { transform: rotate(-4deg); }
+        85% { transform: rotate(0deg); }
+      }
+      @keyframes snipBottom {
+        0%, 100% { transform: rotate(0deg); }
+        40% { transform: rotate(16deg); }
+        60% { transform: rotate(-4deg); }
+        75% { transform: rotate(4deg); }
+        85% { transform: rotate(0deg); }
+      }
+
+      /* Before / After Slider */
+      .before-after-container {
+        position: relative;
+        width: 100%;
+        max-width: 780px;
+        height: 460px;
+        overflow: hidden;
+        border-radius: 20px;
+        user-select: none;
+        box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8), 0 0 30px -5px rgba(212, 175, 55, 0.2);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+      }
+      @media (max-width: 640px) {
+        .before-after-container { height: 360px; }
+      }
+      .before-after-img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
+      }
+      .before-after-overlay {
+        position: absolute;
+        top: 0; left: 0;
+        height: 100%; width: 50%;
+        overflow: hidden;
+        z-index: 10;
+      }
+      .before-after-overlay .before-after-img {
+        width: 780px;
+        max-width: none;
+      }
+      @media (max-width: 780px) {
+        .before-after-overlay .before-after-img { width: 100vw; }
+      }
+      .before-after-handle {
+        position: absolute;
+        top: 0; bottom: 0; left: 50%;
+        width: 4px;
+        background: var(--gold-gradient);
+        z-index: 20;
+        cursor: ew-resize;
+        transform: translateX(-50%);
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+      }
+      .before-after-button {
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 44px; height: 44px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #08090b;
+        border: 2px solid #d4af37;
+        color: #f6e27a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 20px rgba(212, 175, 55, 0.6);
+        cursor: ew-resize;
+      }
+      .before-after-badge {
+        position: absolute;
+        bottom: 20px;
+        padding: 6px 16px;
+        border-radius: 30px;
+        background: rgba(8, 9, 11, 0.85);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        z-index: 15;
+      }
+      .before-badge { left: 20px; color: #ff9999; }
+      .after-badge { right: 20px; color: #f6e27a; }
+
+      /* Sound Bars */
+      .sound-bars { display: flex; align-items: center; gap: 3px; height: 18px; }
+      .sound-bar { width: 3px; background-color: #d4af37; border-radius: 2px; height: 4px; transition: height 0.2s ease; }
+      .sound-active .sound-bar:nth-child(1) { animation: soundWave 0.8s ease-in-out infinite; }
+      .sound-active .sound-bar:nth-child(2) { animation: soundWave 1.1s ease-in-out 0.2s infinite; }
+      .sound-active .sound-bar:nth-child(3) { animation: soundWave 0.9s ease-in-out 0.4s infinite; }
+      .sound-active .sound-bar:nth-child(4) { animation: soundWave 1.2s ease-in-out 0.1s infinite; }
+      @keyframes soundWave { 0%, 100% { height: 4px; } 50% { height: 18px; } }
+
+      /* Tabs & Modal */
+      .tab-btn.active {
+        background: var(--gold-gradient);
+        color: #07080b;
+        font-weight: 700;
+        border-color: transparent;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      }
+      .modal-overlay { transition: opacity 0.3s ease, visibility 0.3s ease; }
+      .modal-content { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; }
+      .modal-overlay.hidden-modal,
+      .modal-overlay.hidden,
+      .hidden-modal {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      .modal-overlay.hidden-modal .modal-content,
+      .modal-overlay.hidden .modal-content {
+        transform: scale(0.95) translateY(20px);
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-[#07080b] text-gray-200 font-body antialiased selection:bg-amber-400 selection:text-black min-h-screen">
+    <slot />
+
+    <!-- Interactive Scripts -->
+    <script is:inline src="./js/scissors-canvas.js"></script>
+    <script is:inline src="./js/app.js"></script>
+  </body>
+</html>

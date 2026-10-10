@@ -1,0 +1,287 @@
+---
+---
+
+<div id="bookingModal" class="modal-overlay hidden-modal hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4" style="display: none;">
+  <div class="modal-content relative w-full max-w-xl bg-neutral-950 border border-amber-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
+    
+    <!-- Modal Close Button -->
+    <button id="closeBookingModal" type="button" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-neutral-900 border border-neutral-700 text-neutral-300 hover:text-amber-400 hover:border-amber-400 flex items-center justify-center transition-all cursor-pointer z-50 text-base font-bold shadow-lg" aria-label="Fechar janela de agendamento">
+      ✕
+    </button>
+
+    <!-- Header -->
+    <div class="text-center mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[11px] font-bold uppercase tracking-wider mb-2">
+        <span>Agendamento Online Instantâneo</span>
+      </div>
+      <h3 class="font-royal text-2xl font-bold text-white">
+        Marcar Horário <span class="text-gold-gradient">Royal Hair</span>
+      </h3>
+      <p class="text-xs text-neutral-400 mt-1">Rua Alves Redol 10A, Odivelas • Confirmação direta no WhatsApp</p>
+    </div>
+
+    <!-- Step Progress Indicators -->
+    <div class="flex items-center justify-center gap-3 mb-8">
+      <div class="flex items-center gap-2">
+        <span class="step-indicator-dot w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-amber-400 text-black ring-4 ring-amber-400/20">1</span>
+        <span class="text-[11px] font-semibold text-neutral-300 hidden sm:inline">Serviço</span>
+      </div>
+      <div class="w-8 h-[2px] bg-neutral-800"></div>
+      <div class="flex items-center gap-2">
+        <span class="step-indicator-dot w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-800 text-gray-400 border border-gray-700">2</span>
+        <span class="text-[11px] font-semibold text-neutral-400 hidden sm:inline">Profissional & Data</span>
+      </div>
+      <div class="w-8 h-[2px] bg-neutral-800"></div>
+      <div class="flex items-center gap-2">
+        <span class="step-indicator-dot w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-800 text-gray-400 border border-gray-700">3</span>
+        <span class="text-[11px] font-semibold text-neutral-400 hidden sm:inline">Dados & Confirmar</span>
+      </div>
+    </div>
+
+    <!-- Booking Form -->
+    <form id="royalBookingForm">
+      
+      <!-- Steps Container -->
+      <div id="bookingModalStepsBody">
+        
+        <!-- STEP 1: Escolha do Serviço de Corte -->
+        <div class="booking-step-pane space-y-3">
+          <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">1. Selecione o Ritual Desejado:</h4>
+          
+          <label class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="serviceSelection" value="Corte Royal & Fade de Precisão" checked class="accent-amber-400" />
+              <div>
+                <span class="text-sm font-bold text-white block">Corte Royal & Skin Fade de Precisão</span>
+                <span class="text-[11px] text-neutral-400">Lavagem capilar + Degradê milimétrico + Finalização matte (35 min)</span>
+              </div>
+            </div>
+            <span class="text-xs text-amber-400 font-mono font-semibold">✂️ Corte</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="serviceSelection" value="Corte Clássico à Tesoura" class="accent-amber-400" />
+              <div>
+                <span class="text-sm font-bold text-white block">Corte Clássico à Tesoura</span>
+                <span class="text-[11px] text-neutral-400">Integral à tesoura e alinhamento de contornos à navalha (30 min)</span>
+              </div>
+            </div>
+            <span class="text-xs text-amber-400 font-mono font-semibold">✂️ Corte</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="serviceSelection" value="Barboterapia com Toalha Quente" class="accent-amber-400" />
+              <div>
+                <span class="text-sm font-bold text-white block">Barboterapia com Toalha Quente</span>
+                <span class="text-[11px] text-neutral-400">Óleo essencial + Toalha a vapor aromática + Lâmina cirúrgica (30 min)</span>
+              </div>
+            </div>
+            <span class="text-xs text-amber-400 font-mono font-semibold">💈 Barba</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="serviceSelection" value="Alinhamento & Escultura de Barba" class="accent-amber-400" />
+              <div>
+                <span class="text-sm font-bold text-white block">Alinhamento & Escultura de Barba</span>
+                <span class="text-[11px] text-neutral-400">Desenho geométrico de bochecha e pescoço + Óleo biológico (20 min)</span>
+              </div>
+            </div>
+            <span class="text-xs text-amber-400 font-mono font-semibold">💈 Barba</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="serviceSelection" value="Camuflagem de Fios Brancos & Coloração" class="accent-amber-400" />
+              <div>
+                <span class="text-sm font-bold text-white block">Camuflagem de Fios Brancos</span>
+                <span class="text-[11px] text-neutral-400">Tonalização 100% natural sem amoníaco para cabelo ou barba (25 min)</span>
+              </div>
+            </div>
+            <span class="text-xs text-amber-400 font-mono font-semibold">🧴 Cor</span>
+          </label>
+
+          <label class="flex items-center justify-between p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="serviceSelection" value="Corte Júnior Infantil" class="accent-amber-400" />
+              <div>
+                <span class="text-sm font-bold text-white block">Corte Júnior (Até 12 anos)</span>
+                <span class="text-[11px] text-neutral-400">Atendimento dedicado e paciente para crianças (25 min)</span>
+              </div>
+            </div>
+            <span class="text-xs text-amber-400 font-mono font-semibold">👦 Júnior</span>
+          </label>
+        </div>
+
+        <!-- STEP 2: Barbeiro, Data e Horário -->
+        <div class="booking-step-pane hidden space-y-5">
+          <div>
+            <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">2. Escolha o Seu Barbeiro:</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <label class="p-3 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer text-center block">
+                <input type="radio" name="barberSelection" value="Marco Silva (Master Barber)" checked class="accent-amber-400 mb-1" />
+                <span class="text-xs font-bold text-white block">Marco Silva</span>
+                <span class="text-[10px] text-neutral-400 block">Master Barber</span>
+              </label>
+
+              <label class="p-3 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer text-center block">
+                <input type="radio" name="barberSelection" value="David Santos (Fade Specialist)" class="accent-amber-400 mb-1" />
+                <span class="text-xs font-bold text-white block">David Santos</span>
+                <span class="text-[10px] text-neutral-400 block">Fade Specialist</span>
+              </label>
+
+              <label class="p-3 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-amber-400/50 cursor-pointer text-center block">
+                <input type="radio" name="barberSelection" value="Primeiro Barbeiro Disponível" class="accent-amber-400 mb-1" />
+                <span class="text-xs font-bold text-white block">Qualquer Barbeiro</span>
+                <span class="text-[10px] text-amber-400 block">Mais Rápido</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Data da Sessão:</h4>
+            <input 
+              type="date" 
+              id="bookingDatePicker" 
+              class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-400 focus:outline-none" 
+            />
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Horários Disponíveis:</h4>
+            <div class="grid grid-cols-4 sm:grid-cols-6 gap-2">
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-amber-400 text-black font-bold border border-amber-400 transition-colors" data-time="09:30">09:30</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="10:15">10:15</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="11:00">11:00</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="11:45">11:45</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="14:00">14:00</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="14:45">14:45</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="15:30">15:30</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="16:15">16:15</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="17:00">17:00</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="17:45">17:45</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="18:30">18:30</button>
+              <button type="button" class="time-slot-btn py-2 rounded-lg text-xs bg-neutral-900 text-gray-300 border border-neutral-800 hover:border-amber-400/40 transition-colors" data-time="19:15">19:15</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Dados de Contacto -->
+        <div class="booking-step-pane hidden space-y-4">
+          <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">3. Os Seus Dados para Confirmação:</h4>
+          
+          <div>
+            <label class="block text-xs text-neutral-300 mb-1">Nome Completo *</label>
+            <input 
+              type="text" 
+              id="clientNameInput" 
+              required 
+              placeholder="Ex: Gonçalo Ferreira" 
+              class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-400 focus:outline-none" 
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs text-neutral-300 mb-1">Número de Telefone / WhatsApp *</label>
+            <input 
+              type="tel" 
+              id="clientPhoneInput" 
+              required 
+              placeholder="+351 939 558 041" 
+              class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-400 focus:outline-none" 
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs text-neutral-300 mb-1">Observações ou Preferências (Opcional)</label>
+            <textarea 
+              id="clientNotesInput" 
+              rows="2" 
+              placeholder="Ex: Primeira vez no salão / quero fade bem baixo / toalha bem quente" 
+              class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-white text-xs focus:border-amber-400 focus:outline-none resize-none"
+            ></textarea>
+          </div>
+
+          <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-300/90 leading-relaxed">
+            ⚡ A sua mensagem pré-formatada será enviada diretamente à nossa equipa em Odivelas (+351 939 558 041 / +351 920 206 618) para validação instantânea.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SUCCESS VIEW (Hidden initially) -->
+      <div id="bookingModalSuccess" class="hidden text-center py-6 space-y-5">
+        <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-400 text-emerald-400 flex items-center justify-center text-3xl mx-auto animate-bounce">
+          ✓
+        </div>
+
+        <div>
+          <h4 class="font-royal text-2xl font-bold text-white">Marcação Pré-Confirmada!</h4>
+          <p class="text-xs text-neutral-400 mt-1">A mensagem oficial com os detalhes da sessão foi gerada com sucesso.</p>
+        </div>
+
+        <div id="bookingSummaryDetails"></div>
+
+        <div class="space-y-3 pt-2">
+          <a 
+            id="successWhatsappLink" 
+            href="#" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-colors"
+          >
+            <span>💬 Abrir WhatsApp e Finalizar</span>
+          </a>
+
+          <button 
+            type="button" 
+            id="newBookingResetBtn" 
+            class="w-full py-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white text-xs font-semibold cursor-pointer"
+          >
+            Agendar Outro Horário
+          </button>
+
+          <button 
+            type="button" 
+            id="closeSuccessModalBtn" 
+            class="w-full py-2.5 rounded-xl bg-neutral-900/70 border border-amber-500/30 text-amber-300 hover:text-white hover:border-amber-400 text-xs font-semibold cursor-pointer transition-colors"
+          >
+            ✕ Concluir e Voltar ao Site
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Step Buttons -->
+      <div class="flex items-center justify-between pt-6 border-t border-neutral-800 mt-6">
+        <button 
+          type="button" 
+          id="prevStepBtn" 
+          class="px-5 py-2.5 rounded-xl border border-neutral-700 text-neutral-300 hover:border-white text-xs font-semibold cursor-pointer" 
+          style="visibility: hidden;"
+        >
+          ← Voltar
+        </button>
+
+        <button 
+          type="button" 
+          id="nextStepBtn" 
+          class="btn-royal-gold px-7 py-3 rounded-xl text-xs font-bold uppercase tracking-wider cursor-pointer"
+        >
+          Próximo Passo →
+        </button>
+
+        <button 
+          type="submit" 
+          id="submitBookingBtn" 
+          class="hidden btn-royal-gold px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider cursor-pointer shadow-lg"
+        >
+          Confirmar & Agendar 👑
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

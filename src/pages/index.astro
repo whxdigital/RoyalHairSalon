@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
+import Services from '../components/Services.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
+import Gallery from '../components/Gallery.astro';
+import Reviews from '../components/Reviews.astro';
+import LocationContact from '../components/LocationContact.astro';
+import BookingModal from '../components/BookingModal.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Royal Hair Salon | A Melhor Barbearia em Odivelas - Lisboa"
+  description="Barbearia premium na Rua Alves Redol 10A, Odivelas. Cortes masculinos de precisão, skin fade milimétrico, barboterapia com toalha quente e atendimento VIP. Agende online sem espera."
+>
+  <!-- Navigation Header -->
+  <Navbar />
+
+  <main>
+    <!-- Hero Section with Live Scissor & Hair Particle Canvas -->
+    <Hero />
+
+    <!-- About Us Section -->
+    <About />
+
+    <!-- Interactive Before/After Fade Slider -->
+    <BeforeAfterSlider />
+
+    <!-- Services & Pricing Grid with Category Filter -->
+    <Services />
+
+    <!-- Why Choose Us / 4 Pillars of Excellence -->
+    <WhyChooseUs />
+
+    <!-- Gallery & Atmosphere Showcase with Lightbox -->
+    <Gallery />
+
+    <!-- Google 5-Star Reviews & Social Proof -->
+    <Reviews />
+
+    <!-- Location, Schedule & Google Maps Live Embed -->
+    <LocationContact />
+  </main>
+
+  <!-- Interactive 3-Step Booking Modal Engine -->
+  <BookingModal />
+
+  <!-- Footer with Sticky Mobile CTA -->
+  <Footer />
+</Layout>

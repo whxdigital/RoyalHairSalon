@@ -1,0 +1,216 @@
+---
+---
+
+<section id="hero" class="relative min-h-[92vh] sm:min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+  <!-- Interactive Hair & Scissor Particles Canvas -->
+  <canvas id="hairCuttingCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+  <!-- Ambient Glow Gradients -->
+  <div class="absolute -top-32 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-10 right-10 w-[30rem] h-[30rem] bg-amber-600/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      
+      <!-- Hero Left: Content & SEO Copy -->
+      <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
+        <!-- Top Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-neutral-900/90 border border-amber-500/30 text-amber-300 text-[11px] sm:text-xs font-semibold tracking-wider uppercase backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <span>📍 Rua Alves Redol 10A, Odivelas</span>
+          <span class="text-neutral-500">•</span>
+          <span class="text-amber-200">Aberto Hoje</span>
+        </div>
+
+        <!-- Local SEO Headline (single h1 per page) -->
+        <h1 id="transHeroTitle" class="font-royal text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] text-white tracking-wide">
+          O Melhor Salão & <br class="hidden sm:inline" />
+          <span class="text-gold-gradient">Barbearia em Odivelas</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p id="transHeroSub" class="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Cortes de precisão, skin fade milimétrico, barboterapia com toalha quente e atendimento VIP na <strong class="text-white">Rua Alves Redol</strong>. A experiência definitiva de grooming masculino às portas de Lisboa.
+        </p>
+
+        <!-- Direct Instant Contact Bar -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-1">
+          <a 
+            href="tel:+351939558041" 
+            class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-neutral-900/90 border border-amber-500/30 text-amber-300 hover:border-amber-400 hover:text-white transition-all text-xs font-semibold shadow-md"
+            title="Ligar para +351 939 558 041"
+          >
+            <span>📞</span>
+            <span class="font-mono">+351 939 558 041</span>
+          </a>
+
+          <a 
+            href="tel:+351920206618" 
+            class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-neutral-900/90 border border-amber-500/30 text-amber-300 hover:border-amber-400 hover:text-white transition-all text-xs font-semibold shadow-md"
+            title="Ligar para +351 920 206 618"
+          >
+            <span>📞</span>
+            <span class="font-mono">+351 920 206 618</span>
+          </a>
+
+          <a 
+            href="https://wa.me/351939558041" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 hover:text-white hover:bg-emerald-900/90 transition-all text-xs font-semibold shadow-md"
+            title="Agendar via WhatsApp"
+          >
+            <span>💬</span>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Google My Business Rating Highlight -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1">
+          <div class="flex items-center gap-1.5 text-amber-400">
+            <span class="font-bold text-white text-base sm:text-lg">4.9</span>
+            <div class="flex text-amber-400 text-xs sm:text-sm">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+          <span class="text-xs text-neutral-400 border-l border-neutral-800 pl-3 sm:pl-4">
+            Mais de <strong class="text-neutral-200">250+ avaliações 5 estrelas</strong> no Google
+          </span>
+          <a href="https://share.google/2O3L2FtG55BM0sQ7y" target="_blank" rel="noopener noreferrer" class="text-xs text-amber-400/90 hover:text-amber-300 underline underline-offset-4 transition-colors font-medium">
+            Ver no Google Maps ↗
+          </a>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-3">
+          <button class="open-booking-modal w-full sm:w-auto btn-royal-gold px-8 py-4 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase cursor-pointer flex items-center justify-center gap-2 group shadow-xl">
+            <span>Agendar Horário Online</span>
+            <svg width="16" height="16" style="width: 16px; height: 16px; max-width: 16px;" class="transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </button>
+
+          <a href="#services" class="w-full sm:w-auto btn-outline-gold px-7 py-4 rounded-xl text-xs sm:text-sm font-semibold tracking-wider text-center transition-all">
+            Ver Serviços de Corte
+          </a>
+
+          <!-- Interactive Cut Trigger Button -->
+          <button id="testCutHeroBtn" class="px-4 py-3.5 rounded-xl bg-neutral-900/90 border border-amber-500/30 text-amber-300 hover:text-amber-200 hover:border-amber-400/60 transition-all text-xs font-semibold flex items-center gap-2 cursor-pointer shadow-lg" title="Clique para cortar fios interativamente">
+            <span>✂️</span>
+            <span>Testar Corte</span>
+          </button>
+        </div>
+
+        <!-- Trust Features Checklist -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-5 border-t border-neutral-800/80 text-[11px] sm:text-xs text-neutral-400">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span>Sem tempo de espera</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span>Toalha quente inclusa</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span>Estacionamento próximo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Right: Interactive Visual (Animated Scissors + 3D Barber Pole) -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center relative mt-6 lg:mt-0">
+        
+        <!-- Barber Pole & Scissors Composition -->
+        <div class="relative w-full flex items-center justify-center py-4 sm:py-6">
+          
+          <!-- 3D Barber Pole (Left Side of Visual) -->
+          <div class="hidden sm:block absolute -left-4 top-1/2 -translate-y-1/2 z-20">
+            <div class="barber-pole-container">
+              <div class="barber-pole-cap"></div>
+              <div class="barber-pole-glass">
+                <div class="barber-pole-stripes"></div>
+              </div>
+              <div class="barber-pole-cap bottom"></div>
+            </div>
+          </div>
+
+          <!-- Central Animated Scissors Apparatus -->
+          <div class="scissors-interactive-wrapper">
+            <!-- Outer Orbit Rings -->
+            <div class="scissors-orbit-ring"></div>
+            <div class="scissors-orbit-ring-inner"></div>
+
+            <!-- Glowing Backdrop Badge -->
+            <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-tr from-neutral-950 via-neutral-900 to-amber-950/40 border border-amber-500/30 flex items-center justify-center shadow-[0_0_60px_rgba(212,175,55,0.2)] relative overflow-hidden">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)]"></div>
+
+              <!-- Animated SVG Golden Scissors -->
+              <svg width="180" height="180" style="width: 180px; height: 180px; max-width: 180px; display: block;" class="w-44 h-44 sm:w-48 sm:h-48 drop-shadow-[0_10px_25px_rgba(212,175,55,0.5)]" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldShearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fff6cc" />
+                    <stop offset="50%" stop-color="#d4af37" />
+                    <stop offset="100%" stop-color="#8a5e12" />
+                  </linearGradient>
+                  <linearGradient id="steelBladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="50%" stop-color="#e2e8f0" />
+                    <stop offset="100%" stop-color="#94a3b8" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Top Scissor Blade (Animated) -->
+                <g class="scissor-blade-top">
+                  <path d="M70 230 C50 230 40 210 40 195 C40 175 60 160 80 160 C95 160 110 170 120 180 L160 180 L260 110 C270 102 280 106 275 116 L175 185 L120 190 C110 210 90 230 70 230 Z" fill="url(#goldShearGrad)" />
+                  <path d="M165 182 L275 110 L180 186 Z" fill="url(#steelBladeGrad)" opacity="0.8" />
+                  <circle cx="70" cy="195" r="16" fill="#0c0d12" stroke="url(#goldShearGrad)" stroke-width="4" />
+                </g>
+
+                <!-- Bottom Scissor Blade (Animated) -->
+                <g class="scissor-blade-bottom">
+                  <path d="M70 130 C50 130 40 150 40 165 C40 185 60 200 80 200 C95 200 110 190 120 180 L160 180 L260 250 C270 258 280 254 275 244 L175 175 L120 170 C110 150 90 130 70 130 Z" fill="url(#goldShearGrad)" />
+                  <path d="M165 178 L275 250 L180 174 Z" fill="url(#steelBladeGrad)" opacity="0.8" />
+                  <circle cx="70" cy="165" r="16" fill="#0c0d12" stroke="url(#goldShearGrad)" stroke-width="4" />
+                </g>
+
+                <!-- Central Pivot Screw -->
+                <circle cx="160" cy="180" r="9" fill="url(#goldShearGrad)" stroke="#222" stroke-width="2" />
+                <circle cx="160" cy="180" r="4" fill="#000" />
+              </svg>
+            </div>
+
+            <!-- Floating VIP Badge (Interactive Booking Trigger) -->
+            <button 
+              type="button" 
+              class="open-booking-modal absolute -bottom-3 right-2 sm:right-6 glass-panel px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl flex items-center gap-3 shadow-xl hover:border-amber-400/80 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer group text-left border border-amber-500/30 z-30" 
+              data-service="Corte Royal & Skin Fade de Precisão"
+              title="Agendar Corte & Fade VIP com Precisão ao Milímetro"
+            >
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm sm:text-base group-hover:scale-110 group-hover:bg-amber-500/30 transition-all shadow-[0_0_12px_rgba(212,175,55,0.3)]">
+                ✂️
+              </div>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white uppercase tracking-wider group-hover:text-amber-300 transition-colors">Corte & Fade VIP</div>
+                <div class="text-[10px] sm:text-[11px] text-amber-400 font-medium flex items-center gap-1">
+                  <span>Precisão ao Milímetro</span>
+                  <span class="text-[9px] text-amber-400/70 group-hover:translate-x-0.5 transition-transform">➔</span>
+                </div>
+              </div>
+            </button>
+
+            <!-- Floating Quick Location Badge -->
+            <div class="absolute -top-3 left-0 sm:left-4 glass-panel px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl flex items-center gap-2 shadow-lg">
+              <span class="text-amber-400 text-xs sm:text-sm">📍</span>
+              <div class="text-left">
+                <div class="text-[10px] sm:text-[11px] font-semibold text-neutral-200">Odivelas • Lisboa</div>
+                <div class="text-[9px] text-neutral-400">Rua Alves Redol 10A</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

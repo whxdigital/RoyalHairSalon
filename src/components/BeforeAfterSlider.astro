@@ -1,0 +1,82 @@
+---
+---
+
+<section id="transformacao" class="py-24 relative overflow-hidden bg-[#0a0b0f] border-t border-neutral-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center">
+    
+    <!-- Section Heading -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-4">
+      <span>Transformação Interativa</span>
+    </div>
+
+    <h2 class="font-royal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+      A Arte do <span class="text-gold-gradient">Royal Fade Perfeito</span>
+    </h2>
+
+    <p class="text-neutral-400 text-sm sm:text-base max-w-2xl mx-auto mb-12">
+      Arraste a lâmina dourada para ver a transformação de um cabelo e barba desalinhados para o fade milimétrico executado pelos nossos especialistas em Odivelas.
+    </p>
+
+    <!-- Before / After Interactive Slider Container (SaaS Vibe) -->
+    <div class="flex justify-center px-2">
+      <div class="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-white/10 bg-neutral-900">
+        
+        <div id="beforeAfterContainer" class="before-after-container relative group cursor-ew-resize select-none overflow-hidden aspect-square">
+          <!-- After Image (Background: Clean Razor-Sharp Royal Fade) -->
+          <img 
+            id="afterImg"
+            src="./images/haircut_after.jpg" 
+            alt="Depois - Corte Fade Perfeito e Barba Esculpida Royal Hair Salon" 
+            class="before-after-img w-full h-full object-cover object-top block select-none pointer-events-none" 
+            draggable="false"
+          />
+
+          <!-- Before Image (Overlay: Wild, messy hair before transformation) -->
+          <div 
+            id="beforeAfterOverlay" 
+            class="before-after-overlay"
+            style="clip-path: inset(0 50% 0 0); -webkit-clip-path: inset(0 50% 0 0);"
+          >
+            <img 
+              id="beforeImg"
+              src="./images/haircut_before.jpg" 
+              alt="Antes - Antes do Corte Royal Hair Salon Odivelas" 
+              class="before-after-img" 
+              draggable="false"
+            />
+          </div>
+
+          <!-- Draggable Handle Divider -->
+          <div id="beforeAfterHandle" class="before-after-handle">
+            <div class="before-after-button">
+              <!-- Left / Right Horizontal Arrows -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-amber-300">
+                <path d="m9 18-6-6 6-6"></path>
+                <path d="m15 6 6 6-6 6"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drag Instructions -->
+    <div class="mt-6 flex items-center justify-center gap-2 text-xs text-neutral-400">
+      <span class="text-amber-400 animate-pulse">⟵</span>
+      <span>Arraste para a esquerda ou direita para comparar</span>
+      <span class="text-amber-400 animate-pulse">⟶</span>
+    </div>
+
+    <!-- Conversion Banner -->
+    <div class="mt-12 max-w-xl mx-auto p-6 rounded-2xl glass-panel border border-amber-500/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-left">
+        <h4 class="font-royal font-bold text-white text-base">Pronto para a sua melhor versão?</h4>
+        <p class="text-xs text-neutral-400 mt-0.5">Atendimento personalizado com análise do formato de rosto.</p>
+      </div>
+      <button class="open-booking-modal shrink-0 btn-royal-gold px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider cursor-pointer">
+        Quero Este Fade
+      </button>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,114 @@
+---
+const galleryItems = [
+  {
+    category: 'fades',
+    title: 'Mid Skin Fade & Crop Texturizado',
+    image: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80',
+    tag: 'Fade Perfeito'
+  },
+  {
+    category: 'fades',
+    title: 'Low Taper Fade & Alinhamento Frontal',
+    image: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80',
+    tag: 'Taper Fade'
+  },
+  {
+    category: 'barbas',
+    title: 'Barboterapia com Toalha Quente Tradicional',
+    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80',
+    tag: 'Toalha Quente'
+  },
+  {
+    category: 'barbas',
+    title: 'Alinhamento Esculpido de Barba & Bigode',
+    image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80',
+    tag: 'Barba VIP'
+  },
+  {
+    category: 'ambiente',
+    title: 'Lounge e Cadeiras Vintage Reclináveis',
+    image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80',
+    tag: 'Espaço Odivelas'
+  },
+  {
+    category: 'ambiente',
+    title: 'Estação de Trabalho Esterilizada & Iluminação Pro',
+    image: 'https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80',
+    tag: 'Higiene & Design'
+  }
+];
+---
+
+<section id="gallery" class="py-24 relative overflow-hidden bg-[#07080b] border-t border-neutral-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">
+        <span>Portfolio de Cortes</span>
+      </div>
+      <h2 class="font-royal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+        Galeria de <span class="text-gold-gradient">Cortes & Ambiente</span>
+      </h2>
+      <p class="text-neutral-400 text-sm sm:text-base">
+        Veja alguns dos trabalhos reais executados na Rua Alves Redol 10A e a atmosfera que o espera.
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+      <button class="gallery-filter-btn tab-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-gallery-filter="all">
+        Ver Tudo
+      </button>
+      <button class="gallery-filter-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-gallery-filter="fades">
+        ✂️ Fades & Cortes
+      </button>
+      <button class="gallery-filter-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-gallery-filter="barbas">
+        💈 Barbas & Rituais
+      </button>
+      <button class="gallery-filter-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-gallery-filter="ambiente">
+        🏛️ Espaço & Ambiente
+      </button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {galleryItems.map((item) => (
+        <div 
+          class="gallery-item gallery-card group rounded-2xl overflow-hidden glass-panel border border-neutral-800"
+          data-category={item.category}
+          data-title={item.title}
+        >
+          <img 
+            src={item.image} 
+            alt={item.title} 
+            loading="lazy"
+            class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
+          />
+          <div class="gallery-overlay">
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest block mb-1">
+              {item.tag}
+            </span>
+            <h4 class="font-royal text-white font-bold text-base leading-snug">
+              {item.title}
+            </h4>
+            <span class="text-xs text-neutral-300 mt-2 flex items-center gap-1.5 opacity-90">
+              <span>🔍 Clique para ampliar</span>
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="galleryLightboxModal" class="modal-overlay hidden-modal hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4" style="display: none;">
+      <div class="relative max-w-4xl w-full">
+        <button id="closeGalleryLightbox" class="absolute -top-12 right-0 text-white/80 hover:text-white text-3xl font-bold cursor-pointer">
+          ✕
+        </button>
+        <img id="galleryLightboxImg" src="" alt="Imagem ampliada" class="w-full max-h-[80vh] object-contain rounded-2xl border border-amber-500/30 shadow-2xl" />
+        <div id="galleryLightboxCaption" class="text-center text-amber-300 font-royal font-bold text-lg mt-4"></div>
+      </div>
+    </div>
+
+  </div>
+</section>

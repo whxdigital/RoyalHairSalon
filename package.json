@@ -1,0 +1,17 @@
+{
+  "name": "royal-hair-salon-odivelas",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "node server.mjs",
+    "build": "node build.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^4.16.18",
+    "tailwindcss": "^3.4.17"
+  }
+}

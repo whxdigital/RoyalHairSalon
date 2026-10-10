@@ -1,0 +1,102 @@
+---
+---
+
+<header id="mainNavbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 px-4 sm:px-8">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="#hero" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-full border border-amber-400/40 bg-neutral-900/90 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="width: 20px; height: 20px; max-width: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="6" cy="6" r="3"></circle>
+          <path d="M8.12 8.12 12 12"></path>
+          <path d="M20 4 8.12 15.88"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <path d="M14.8 14.8 20 20"></path>
+        </svg>
+      </div>
+      <div>
+        <span class="font-royal font-bold text-lg tracking-wider text-gold-gradient block leading-none">ROYAL HAIR</span>
+        <span class="text-[10px] tracking-[0.2em] uppercase text-neutral-400 block mt-1">Barbearia Odivelas</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-8 text-[13px] font-semibold text-neutral-400 tracking-wide uppercase">
+      <a href="#services" class="hover:text-white hover:text-amber-400 transition-colors">Serviços</a>
+      <a href="#transformacao" class="hover:text-white hover:text-amber-400 transition-colors">Transformação</a>
+      <a href="#gallery" class="hover:text-white hover:text-amber-400 transition-colors">Galeria</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="hidden sm:flex items-center gap-3">
+      <!-- Direct Contact Quick Call Pill -->
+      <a href="tel:+351939558041" class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900/90 border border-neutral-700 text-xs text-amber-300 hover:border-amber-400 hover:text-amber-200 transition-colors" title="Ligar para +351 939 558 041">
+        <span>📞</span>
+        <span class="font-mono text-[11px]">+351 939 558 041</span>
+      </a>
+
+      <!-- Theme Switcher -->
+      <button id="themeToggleBtn" class="flex items-center justify-center w-7 h-7 rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700 hover:border-amber-400 transition-colors" title="Toggle Light/Dark Mode">
+        <span id="themeIcon" class="text-[14px]">☀️</span>
+      </button>
+
+      <!-- Language Switcher -->
+      <button id="langToggleBtn" class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700 hover:border-amber-400 transition-colors">
+        <span class="text-[14px]">🌍</span> <span id="langFlag">🇵🇹</span>
+      </button>
+    </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg bg-neutral-900 border border-neutral-800 text-amber-400 hover:text-white transition-colors" aria-label="Abrir menu de navegação">
+      <svg width="24" height="24" style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileNavDrawer" class="fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-neutral-950/98 backdrop-blur-2xl border-l border-amber-500/30 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 z-50 lg:hidden shadow-2xl overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-neutral-800">
+        <div class="flex items-center gap-2">
+          <span class="font-royal font-bold text-amber-400 text-lg">ROYAL HAIR</span>
+        </div>
+        <button id="closeMobileNavDrawer" class="p-2 text-neutral-400 hover:text-white" aria-label="Fechar menu">
+          <svg width="24" height="24" style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 mt-8 text-base font-semibold uppercase tracking-wider">
+        <a href="#services" class="mobile-nav-link text-neutral-400 hover:text-amber-400 transition-colors py-2 border-b border-neutral-900">Serviços</a>
+        <a href="#transformacao" class="mobile-nav-link text-neutral-400 hover:text-amber-400 transition-colors py-2 border-b border-neutral-900">Transformação</a>
+        <a href="#gallery" class="mobile-nav-link text-neutral-400 hover:text-amber-400 transition-colors py-2 border-b border-neutral-900">Galeria</a>
+      </nav>
+    </div>
+
+    <div class="space-y-3 pt-6 border-t border-neutral-800">
+      <button class="open-booking-modal w-full btn-royal-gold py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider block shadow-lg">
+        Agendar Horário ✂️
+      </button>
+      
+      <!-- Direct Calls -->
+      <div class="grid grid-cols-2 gap-2">
+        <a href="tel:+351939558041" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-neutral-900 border border-amber-500/30 text-amber-300 text-[11px] font-semibold">
+          <span>📞 Linha 1</span>
+        </a>
+        <a href="tel:+351920206618" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-neutral-900 border border-amber-500/30 text-amber-300 text-[11px] font-semibold">
+          <span>📞 Linha 2</span>
+        </a>
+      </div>
+
+      <a href="https://wa.me/351939558041" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600/25 text-emerald-400 border border-emerald-500/40 text-xs font-bold uppercase tracking-wider">
+        <span>💬 Falar no WhatsApp</span>
+      </a>
+
+      <div class="text-[11px] text-neutral-400 text-center pt-1">
+        📍 Rua Alves Redol 10A, Odivelas
+      </div>
+    </div>
+  </div>
+</header>
