@@ -27,15 +27,15 @@ const faqs = [
 ];
 ---
 
-<section id="faq" class="py-24 relative overflow-hidden bg-neutral-950/80 border-t border-neutral-900">
+<section id="faq" class="py-24 relative overflow-hidden bg-[#0A0A0A] border-t border-white/10">
   <div class="max-w-4xl mx-auto px-4 sm:px-8">
     
     <div class="text-center mb-16">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] text-xs font-bold uppercase tracking-widest mb-3">
         <span>Tire as Suas Dúvidas</span>
       </div>
       <h2 class="font-royal text-3xl sm:text-4xl font-bold text-white mb-4">
-        Perguntas <span class="text-gold-gradient">Frequentes (FAQ)</span>
+        Perguntas <span class="text-orange-gradient">Frequentes (FAQ)</span>
       </h2>
       <p class="text-neutral-400 text-sm">
         Tudo o que precisa de saber antes da sua visita ao Royal Hair Salon em Odivelas.
@@ -45,16 +45,16 @@ const faqs = [
     <!-- FAQ Accordion -->
     <div class="space-y-4">
       {faqs.map((faq) => (
-        <div class="glass-panel rounded-2xl overflow-hidden border border-neutral-800">
+        <div class="glass-panel rounded-2xl overflow-hidden border border-neutral-800 hover:border-[#FF6B00]/40 transition-colors">
           <button 
             type="button"
-            class="faq-item-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-white hover:text-amber-300 transition-colors cursor-pointer"
+            class="faq-item-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-white hover:text-[#FF6B00] transition-colors cursor-pointer"
             aria-expanded="false"
           >
             <span class="font-royal font-bold text-sm sm:text-base leading-snug">
               {faq.q}
             </span>
-            <span class="faq-icon text-amber-400 text-xl font-bold transition-transform duration-300 shrink-0">
+            <span class="faq-icon text-[#FF6B00] text-xl font-bold transition-transform duration-300 shrink-0">
               ▼
             </span>
           </button>

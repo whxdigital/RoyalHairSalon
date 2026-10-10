@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --gold-primary: #d4af37;
-  --gold-light: #f6e27a;
-  --gold-dark: #aa771c;
-  --gold-gradient: linear-gradient(135deg, #f6e27a 0%, #d4af37 50%, #aa771c 100%);
-  --gold-glow: rgba(212, 175, 55, 0.35);
+  --orange-primary: #FF6B00;
+  --orange-light: #FFA04D;
+  --orange-dark: #D95300;
+  --orange-gradient: linear-gradient(135deg, #FF8533 0%, #FF6B00 60%, #E05E00 100%);
+  --orange-glow: rgba(255, 107, 0, 0.4);
+
+  --gold-primary: #FF6B00;
+  --gold-light: #FFA04D;
+  --gold-dark: #D95300;
+  --gold-gradient: linear-gradient(135deg, #FFA04D 0%, #FF6B00 50%, #D95300 100%);
+  --gold-glow: rgba(255, 107, 0, 0.35);
   
-  --bg-deep: #08090b;
-  --bg-card: rgba(18, 20, 26, 0.75);
-  --border-subtle: rgba(212, 175, 55, 0.18);
-  --border-active: rgba(212, 175, 55, 0.6);
+  --bg-deep: #0A0A0A;
+  --bg-card: rgba(18, 18, 20, 0.9);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-orange: rgba(255, 107, 0, 0.4);
+  --border-active: #FF6B00;
 }
 
 /* Custom Scrollbar */
@@ -20,25 +27,26 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #08090b;
+  background: #0A0A0A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2c38;
+  background: #27272a;
   border-radius: 4px;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(255, 107, 0, 0.2);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: #FF6B00;
 }
 
-/* Gold Text Gradients */
-.text-gold-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #f6e27a 35%, #d4af37 70%, #aa771c 100%);
+/* Vibrant Burnt Orange & White Heading Gradients */
+.text-gold-gradient,
+.text-orange-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFA04D 45%, #FF6B00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Glassmorphism Cards */
+/* Minimalist SaaS Border Cards */
 .glass-panel {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
@@ -48,25 +56,27 @@
 }
 
 .glass-panel:hover {
-  border-color: var(--border-active);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px var(--gold-glow);
+  border-color: rgba(255, 107, 0, 0.5);
+  box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.8), 0 0 25px -5px var(--orange-glow);
 }
 
-/* Luxury Royal Gold Button */
-.btn-royal-gold {
+/* Premium Burnt Orange SaaS Primary Button */
+.btn-royal-gold,
+.btn-brand-orange {
   position: relative;
-  background: var(--gold-gradient);
-  color: #08090b;
+  background: var(--orange-gradient);
+  color: #FFFFFF;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   border: none;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.4);
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.btn-royal-gold::before {
+.btn-royal-gold::before,
+.btn-brand-orange::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -83,28 +93,32 @@
   transition: all 0.6s ease;
 }
 
-.btn-royal-gold:hover::before {
+.btn-royal-gold:hover::before,
+.btn-brand-orange:hover::before {
   left: 120%;
 }
 
-.btn-royal-gold:hover {
+.btn-royal-gold:hover,
+.btn-brand-orange:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.55);
+  box-shadow: 0 8px 30px rgba(255, 107, 0, 0.6);
 }
 
-.btn-outline-gold {
+.btn-outline-gold,
+.btn-outline-orange {
   background: transparent;
-  color: #f6e27a;
-  border: 1px solid var(--gold-primary);
-  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 107, 0, 0.5);
+  letter-spacing: 0.05em;
   transition: all 0.3s ease;
 }
 
-.btn-outline-gold:hover {
-  background: rgba(212, 175, 55, 0.12);
-  border-color: #f6e27a;
-  color: #fff;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+.btn-outline-gold:hover,
+.btn-outline-orange:hover {
+  background: rgba(255, 107, 0, 0.12);
+  border-color: #FF6B00;
+  color: #FF8533;
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.25);
 }
 
 /* ==========================================================================

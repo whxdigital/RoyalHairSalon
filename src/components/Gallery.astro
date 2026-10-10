@@ -39,15 +39,15 @@ const galleryItems = [
 ];
 ---
 
-<section id="gallery" class="py-24 relative overflow-hidden bg-[#07080b] border-t border-neutral-900">
+<section id="gallery" class="py-24 relative overflow-hidden bg-[#0A0A0A] border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-12">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] text-xs font-bold uppercase tracking-widest mb-3">
         <span>Portfolio de Cortes</span>
       </div>
       <h2 class="font-royal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-        Galeria de <span class="text-gold-gradient">Cortes & Ambiente</span>
+        Galeria de <span class="text-orange-gradient">Cortes & Ambiente</span>
       </h2>
       <p class="text-neutral-400 text-sm sm:text-base">
         Veja alguns dos trabalhos reais executados na Rua Alves Redol 10A e a atmosfera que o espera.
@@ -85,7 +85,7 @@ const galleryItems = [
             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
           />
           <div class="gallery-overlay">
-            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest block mb-1">
+            <span class="text-[10px] font-bold text-[#FF6B00] uppercase tracking-widest block mb-1">
               {item.tag}
             </span>
             <h4 class="font-royal text-white font-bold text-base leading-snug">
@@ -102,11 +102,11 @@ const galleryItems = [
     <!-- Lightbox Modal -->
     <div id="galleryLightboxModal" class="modal-overlay hidden-modal hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4" style="display: none;">
       <div class="relative max-w-4xl w-full">
-        <button id="closeGalleryLightbox" class="absolute -top-12 right-0 text-white/80 hover:text-white text-3xl font-bold cursor-pointer">
+        <button id="closeGalleryLightbox" class="absolute -top-12 right-0 text-white/80 hover:text-[#FF6B00] text-3xl font-bold cursor-pointer">
           ✕
         </button>
-        <img id="galleryLightboxImg" src="" alt="Imagem ampliada" class="w-full max-h-[80vh] object-contain rounded-2xl border border-amber-500/30 shadow-2xl" />
-        <div id="galleryLightboxCaption" class="text-center text-amber-300 font-royal font-bold text-lg mt-4"></div>
+        <img id="galleryLightboxImg" src="" alt="Imagem ampliada" class="w-full max-h-[80vh] object-contain rounded-2xl border border-white/20 shadow-2xl" />
+        <div id="galleryLightboxCaption" class="text-center text-[#FF6B00] font-royal font-bold text-lg mt-4"></div>
       </div>
     </div>
 

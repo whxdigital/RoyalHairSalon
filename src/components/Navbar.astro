@@ -5,7 +5,7 @@
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <!-- Brand Logo -->
     <a href="#hero" class="flex items-center gap-3 group">
-      <div class="w-10 h-10 rounded-full border border-amber-400/40 bg-neutral-900/90 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+      <div class="w-10 h-10 rounded-xl border border-[#FF6B00]/40 bg-[#121214] flex items-center justify-center text-[#FF6B00] group-hover:scale-105 group-hover:border-[#FF6B00] transition-all shadow-[0_0_15px_rgba(255,107,0,0.3)]">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="width: 20px; height: 20px; max-width: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="6" cy="6" r="3"></circle>
           <path d="M8.12 8.12 12 12"></path>
@@ -15,34 +15,48 @@
         </svg>
       </div>
       <div>
-        <span class="font-royal font-bold text-lg tracking-wider text-gold-gradient block leading-none">ROYAL HAIR</span>
-        <span class="text-[10px] tracking-[0.2em] uppercase text-neutral-400 block mt-1">Barbearia Odivelas</span>
+        <span class="font-royal font-extrabold text-lg tracking-wider text-white block leading-none">ROYAL<span class="text-[#FF6B00]">.</span>HAIR</span>
+        <span class="text-[9px] tracking-[0.25em] uppercase text-neutral-400 block mt-1">Barbearia Odivelas</span>
       </div>
     </a>
 
+    <!-- Live Booking Status Badge (SaaS Pill) -->
+    <div class="hidden lg:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#121214] border border-white/10 shadow-inner">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span class="text-[11px] font-medium text-neutral-300">Live Booking: <span class="text-emerald-400 font-semibold">Vagas Disponíveis Hoje</span></span>
+    </div>
+
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-[13px] font-semibold text-neutral-400 tracking-wide uppercase">
-      <a href="#services" class="hover:text-white hover:text-amber-400 transition-colors">Serviços</a>
-      <a href="#transformacao" class="hover:text-white hover:text-amber-400 transition-colors">Transformação</a>
-      <a href="#gallery" class="hover:text-white hover:text-amber-400 transition-colors">Galeria</a>
+      <a href="#services" class="hover:text-white hover:text-[#FF6B00] transition-colors">Serviços</a>
+      <a href="#transformacao" class="hover:text-white hover:text-[#FF6B00] transition-colors">Transformação</a>
+      <a href="#gallery" class="hover:text-white hover:text-[#FF6B00] transition-colors">Galeria</a>
     </nav>
 
     <!-- Header Actions -->
     <div class="hidden sm:flex items-center gap-3">
+      <!-- Quick Booking CTA -->
+      <button class="open-booking-modal btn-brand-orange px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider cursor-pointer">
+        Agendar Horário
+      </button>
+
       <!-- Direct Contact Quick Call Pill -->
-      <a href="tel:+351939558041" class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900/90 border border-neutral-700 text-xs text-amber-300 hover:border-amber-400 hover:text-amber-200 transition-colors" title="Ligar para +351 939 558 041">
+      <a href="tel:+351939558041" class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#121214] border border-white/10 text-xs text-neutral-300 hover:border-[#FF6B00] hover:text-white transition-colors" title="Ligar para +351 939 558 041">
         <span>📞</span>
         <span class="font-mono text-[11px]">+351 939 558 041</span>
       </a>
 
       <!-- Theme Switcher -->
-      <button id="themeToggleBtn" class="flex items-center justify-center w-7 h-7 rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700 hover:border-amber-400 transition-colors" title="Toggle Light/Dark Mode">
-        <span id="themeIcon" class="text-[14px]">☀️</span>
+      <button id="themeToggleBtn" class="flex items-center justify-center w-7 h-7 rounded-lg bg-[#121214] text-neutral-300 border border-white/10 hover:border-[#FF6B00] transition-colors" title="Toggle Light/Dark Mode">
+        <span id="themeIcon" class="text-[13px]">☀️</span>
       </button>
 
       <!-- Language Switcher -->
-      <button id="langToggleBtn" class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-md bg-neutral-800 text-neutral-300 border border-neutral-700 hover:border-amber-400 transition-colors">
-        <span class="text-[14px]">🌍</span> <span id="langFlag">🇵🇹</span>
+      <button id="langToggleBtn" class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-lg bg-[#121214] text-neutral-300 border border-white/10 hover:border-[#FF6B00] transition-colors">
+        <span class="text-[13px]">🌍</span> <span id="langFlag">🇵🇹</span>
       </button>
     </div>
 

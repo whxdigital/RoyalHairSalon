@@ -63,58 +63,58 @@ const services = [
 ];
 ---
 
-<section id="services" class="py-24 relative overflow-hidden bg-neutral-950 border-t border-neutral-900">
+<section id="services" class="py-24 relative overflow-hidden bg-[#0A0A0A] border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
     
     <!-- Section Title -->
     <div class="text-center max-w-3xl mx-auto mb-12">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF8533] text-xs font-bold uppercase tracking-widest mb-3">
         <span>Mestria & Rituais</span>
       </div>
-      <h2 id="transServicesTitle" class="font-royal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-        Serviços de Corte & <span class="text-gold-gradient">Barbearia em Odivelas</span>
+      <h2 id="transServicesTitle" class="font-royal text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+        Serviços de Corte & <span class="text-orange-gradient">Barbearia em Odivelas</span>
       </h2>
       <p id="transServicesSub" class="text-neutral-400 text-sm sm:text-base">
-        Técnicas artesanais de precisão, produtos de referência europeia e atendimento personalizado na Rua Alves Redol 10A.
+        Técnicas artesanais de precisão arquitetónica, produtos de referência europeia e atendimento personalizado na Rua Alves Redol 10A.
       </p>
     </div>
 
     <!-- Filter Category Tabs -->
     <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
-      <button class="service-tab-btn tab-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-filter="all">
+      <button class="service-tab-btn tab-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#FF6B00] text-white border border-[#FF6B00] transition-all cursor-pointer shadow-[0_0_20px_rgba(255,107,0,0.35)]" data-filter="all">
         Todos os Serviços
       </button>
-      <button class="service-tab-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-filter="cabelo">
+      <button class="service-tab-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#121214] text-neutral-300 border border-white/10 hover:border-[#FF6B00]/50 transition-all cursor-pointer" data-filter="cabelo">
         ✂️ Cabelo & Fade
       </button>
-      <button class="service-tab-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-filter="barba">
+      <button class="service-tab-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#121214] text-neutral-300 border border-white/10 hover:border-[#FF6B00]/50 transition-all cursor-pointer" data-filter="barba">
         💈 Barba & Toalha Quente
       </button>
-      <button class="service-tab-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-900 text-neutral-300 border border-neutral-800 transition-all cursor-pointer" data-filter="tratamentos">
+      <button class="service-tab-btn tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#121214] text-neutral-300 border border-white/10 hover:border-[#FF6B00]/50 transition-all cursor-pointer" data-filter="tratamentos">
         🧴 Tratamentos
       </button>
     </div>
 
-    <!-- Services Grid (Without Prices & Packages) -->
+    <!-- Services Grid (Minimalist SaaS Border Cards) -->
     <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {services.map((item) => (
-        <div class="service-card-item glass-panel rounded-2xl p-6 flex flex-col justify-between relative group hover:-translate-y-1 transition-all duration-300 border border-neutral-800/80 hover:border-amber-400/50 shadow-lg" data-category={item.category}>
+        <div class="service-card-item rounded-2xl p-6 flex flex-col justify-between relative group hover:-translate-y-1 transition-all duration-300 bg-[#121214] border border-white/10 hover:border-[#FF6B00]/60 shadow-[0_10px_30px_rgba(0,0,0,0.6)] hover:shadow-[0_15px_35px_rgba(255,107,0,0.15)]" data-category={item.category}>
           {item.popular && (
-            <div class="absolute -top-3 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-black text-[10px] uppercase tracking-wider shadow-lg">
+            <div class="absolute -top-3 right-6 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#FF6B00] to-[#E05E00] text-white font-extrabold text-[10px] uppercase tracking-wider shadow-lg">
               ★ Destaque Royal
             </div>
           )}
 
           <div>
-            <div class="flex items-start justify-between gap-4 pb-3 border-b border-neutral-800/80">
+            <div class="flex items-start justify-between gap-4 pb-4 border-b border-white/5">
               <div>
-                <h3 class="font-royal font-bold text-white text-lg group-hover:text-amber-300 transition-colors">
+                <h3 class="font-royal font-bold text-white text-lg group-hover:text-[#FF8533] transition-colors">
                   {item.name}
                 </h3>
                 <span class="text-[11px] text-neutral-400 block mt-0.5">{item.subtitle}</span>
               </div>
               <div class="text-right shrink-0">
-                <span class="px-2.5 py-1 rounded-lg bg-neutral-900 text-amber-400 border border-amber-500/20 text-xs font-semibold block font-mono">
+                <span class="px-2.5 py-1 rounded-lg bg-[#0A0A0A] text-[#FF8533] border border-[#FF6B00]/30 text-xs font-semibold block font-mono">
                   ⏱ {item.duration}
                 </span>
               </div>
@@ -127,7 +127,7 @@ const services = [
             <ul class="space-y-1.5 mb-6 text-xs text-neutral-300">
               {item.features.map((feat) => (
                 <li class="flex items-center gap-2">
-                  <span class="text-amber-400 font-bold">✓</span>
+                  <span class="text-[#FF6B00] font-bold">✓</span>
                   <span>{feat}</span>
                 </li>
               ))}
@@ -135,7 +135,7 @@ const services = [
           </div>
 
           <button 
-            class="open-booking-modal w-full py-3.5 rounded-xl border border-amber-500/40 text-amber-300 hover:bg-amber-400 hover:text-black hover:border-amber-400 font-bold text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer text-center flex items-center justify-center gap-2 shadow-md group-hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+            class="open-booking-modal w-full py-3.5 rounded-xl border border-white/15 bg-white/5 text-white hover:bg-[#FF6B00] hover:text-white hover:border-[#FF6B00] font-bold text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer text-center flex items-center justify-center gap-2 shadow-md group-hover:shadow-[0_0_20px_rgba(255,107,0,0.35)]"
             data-service={item.name}
           >
             <span>Agendar Este Serviço</span>
@@ -146,13 +146,13 @@ const services = [
     </div>
 
     <!-- Bottom Contact Notice -->
-    <div class="mt-12 p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+    <div class="mt-12 p-6 rounded-2xl bg-[#121214] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
       <div>
         <h4 class="text-sm font-bold text-white">Dúvidas sobre o corte ou técnica ideal para o seu formato de rosto?</h4>
         <p class="text-xs text-neutral-400 mt-1">Os nossos barbeiros especializados prestam consultoria de visagismo personalizada antes de cada corte.</p>
       </div>
       <div class="flex items-center gap-3 shrink-0">
-        <a href="tel:+351939558041" class="btn-outline-gold px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+        <a href="tel:+351939558041" class="btn-outline-orange px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">
           📞 +351 939 558 041
         </a>
         <a href="https://wa.me/351939558041" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-600 hover:text-white text-xs font-bold uppercase tracking-wider transition-all">

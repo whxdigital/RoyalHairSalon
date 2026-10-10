@@ -30,20 +30,20 @@ const testimonials = [
 ];
 ---
 
-<section id="reviews" class="py-24 relative overflow-hidden bg-neutral-950 border-t border-neutral-900">
+<section id="reviews" class="py-24 relative overflow-hidden bg-[#0A0A0A] border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
     
     <!-- Header with GMB Badge -->
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] text-xs font-bold uppercase tracking-widest mb-3">
         <span>Avaliações Verificadas</span>
       </div>
       <h2 class="font-royal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-        O Que Dizem os Nossos <span class="text-gold-gradient">Clientes</span>
+        O Que Dizem os Nossos <span class="text-orange-gradient">Clientes</span>
       </h2>
       
       <!-- Big Rating Badge -->
-      <div class="inline-flex items-center gap-4 p-3 rounded-2xl bg-neutral-900/90 border border-neutral-800 shadow-xl mt-2">
+      <div class="inline-flex items-center gap-4 p-3 rounded-2xl bg-[#121214] border border-white/10 shadow-xl mt-2">
         <div class="flex items-center gap-2">
           <!-- Google Icon -->
           <svg width="24" height="24" style="width: 24px; height: 24px; max-width: 24px; min-width: 24px; display: inline-block;" class="w-6 h-6" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@ const testimonials = [
             <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
           </svg>
           <span class="text-2xl font-black text-white font-royal">4.9</span>
-          <div class="text-amber-400 text-sm">
+          <div class="text-[#FF6B00] text-sm">
             ★★★★★
           </div>
         </div>
@@ -66,11 +66,11 @@ const testimonials = [
     <!-- Testimonials Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {testimonials.map((rev) => (
-        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between hover:border-amber-400/40 transition-all duration-300">
+        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between hover:border-[#FF6B00]/50 transition-all duration-300">
           <div>
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
-                <img src={rev.avatar} alt={rev.name} class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
+                <img src={rev.avatar} alt={rev.name} class="w-11 h-11 rounded-full object-cover border border-[#FF6B00]/40" />
                 <div>
                   <h4 class="text-sm font-bold text-white">{rev.name}</h4>
                   <span class="text-[11px] text-neutral-400">{rev.location}</span>
@@ -79,7 +79,7 @@ const testimonials = [
               <span class="text-[10px] text-neutral-500">{rev.date}</span>
             </div>
 
-            <div class="flex text-amber-400 text-xs mb-3">
+            <div class="flex text-[#FF6B00] text-xs mb-3">
               <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
             </div>
 
@@ -89,7 +89,7 @@ const testimonials = [
           </div>
 
           <div class="pt-4 border-t border-neutral-800 flex items-center justify-between text-[11px]">
-            <span class="text-amber-400 font-semibold">{rev.service}</span>
+            <span class="text-[#FF6B00] font-semibold">{rev.service}</span>
             <span class="text-emerald-400 flex items-center gap-1 font-medium">
               <svg width="14" height="14" style="width: 14px; height: 14px; max-width: 14px; min-width: 14px; display: inline-block;" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
@@ -107,7 +107,7 @@ const testimonials = [
         href="https://share.google/2O3L2FtG55BM0sQ7y" 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-700 hover:border-amber-400 text-neutral-200 hover:text-amber-300 text-xs font-bold uppercase tracking-wider transition-all"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-700 hover:border-[#FF6B00] text-neutral-200 hover:text-[#FF6B00] text-xs font-bold uppercase tracking-wider transition-all"
       >
         <span>Ver Todas as Avaliações no Google Maps</span>
         <span>↗</span>
