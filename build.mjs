@@ -82,7 +82,7 @@ try {
   }
 
   // Ensure public files like robots.txt, llms.txt, sitemap.xml are in dist
-  const publicFiles = ['robots.txt', 'llms.txt', 'llms-full.txt', 'sitemap.xml', 'favicon.svg'];
+  const publicFiles = ['robots.txt', 'llms.txt', 'llms-full.txt', 'sitemap.xml', 'favicon.svg', '.nojekyll'];
   for (const file of publicFiles) {
     const src = path.join(__dirname, 'public', file);
     const dest = path.join(__dirname, 'dist', file);
